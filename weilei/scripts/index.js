@@ -1,4 +1,4 @@
-var scale;
+ï»¿var scale;
 $(function () {
     /** ===>>>for ios **/
     $(window).on('scroll.elasticity', function (e) {
@@ -9,7 +9,7 @@ $(function () {
 
     /** ===>>>scale settings (The standard size:640*1008) **/
     
-    $("#outer-container,.page").css({ "width": window.innerWidth + "px", "height": window.innerHeight + "px" }).hide();   //set container as device size£¬hide the pages
+    $("#outer-container,.page").css({ "width": window.innerWidth + "px", "height": window.innerHeight + "px" }).hide();   //set container as device sizeï¼Œhide the pages
     $("#outer-container").show();																				 //show container
     $("#loading").show();																						 //show loading
     scale = window.innerHeight / 1008 < window.innerWidth / 640 ? window.innerHeight / 1008 : window.innerWidth / 640;	 //confirm the scale proportion
@@ -57,7 +57,7 @@ $(function () {
         imgs.push(img);
     }
 
-    //¼ÓÔØË®Åİ
+    //åŠ è½½æ°´æ³¡
     var inter;
     var loadWater = function () {
         var div = $("<div class='objmove'></div>");
@@ -109,23 +109,23 @@ $(function () {
     var animateflag;
 
     //-------------------------------------
-    //Î¶µÀÊı¾İ
+    //å‘³é“æ•°æ®
     var taste = {
-        "1": "ÆÏÌÑ", "2": "Ïã½¶", "3": "Ä¾¹Ï", "4": "Ã¢¹û", "5": "ÕëÒ¶Ó£ÌÒ", "6": "ÄûÃÊ", "7": "·¬ÇÑ",
-        "8": "À±½·", "9": "²İİ®", "10": "´óËâ", "11": "ÁñÁ«", "12": "»ÆÌÒ", "13": "Ïã²İ", "14": "°ÙÏã¹û",
-        "15": "»Æ¹Ï", "16": "³ÂÆ¤", "17": "ÏãÓó", "18": "½æÄ©", "19": "ÇÉ¿ËÁ¦", "20": "ÂíÀ­¼ÓÆÏÌÑ¾Æ", "21": "Ä¨²è",
-        "22": "ÑîÃ·", "23": "Æ»¹û", "24": "ÜÔÀò»¨", "25": "ÃÛÌÒ", "26": "ÎÚÁú²è", "27": "±¡ºÉ",
-        "28": "Î÷èÖ", "29": "ÀÏ¸ÉÂè", "30": "ÎŞ"
+        "1": "è‘¡è„", "2": "é¦™è•‰", "3": "æœ¨ç“œ", "4": "èŠ’æœ", "5": "é’ˆå¶æ¨±æ¡ƒ", "6": "æŸ æª¬", "7": "ç•ªèŒ„",
+        "8": "è¾£æ¤’", "9": "è‰è“", "10": "å¤§è’œ", "11": "æ¦´è²", "12": "é»„æ¡ƒ", "13": "é¦™è‰", "14": "ç™¾é¦™æœ",
+        "15": "é»„ç“œ", "16": "é™ˆçš®", "17": "é¦™èŠ‹", "18": "èŠ¥æœ«", "19": "å·§å…‹åŠ›", "20": "é©¬æ‹‰åŠ è‘¡è„é…’", "21": "æŠ¹èŒ¶",
+        "22": "æ¨æ¢…", "23": "è‹¹æœ", "24": "èŒ‰è‰èŠ±", "25": "èœœæ¡ƒ", "26": "ä¹Œé¾™èŒ¶", "27": "è–„è·",
+        "28": "è¥¿æŸš", "29": "è€å¹²å¦ˆ", "30": "æ— "
     }
 
-    var tastes = [];                                 //Ñ¡ÁËÄÄ¼¸ÖÖ¿ÚÎ¶,×î¶àÈıÖÖ,5,9,12
+    var tastes = [];                                 //é€‰äº†å“ªå‡ ç§å£å‘³,æœ€å¤šä¸‰ç§,5,9,12
 
-    var rearr = [];                                 //×îÖÕÑ¡ÔñµÄ¿ÚÎ¶,´æ·ÅÏÖÓĞ¿ÚÎ¶µÄÏÂ±êÖµ£¬ÓÃ»§ÊäÈëµÄÔ­Öµ
-    var boy = 501;                                  //´æ·ÅÄĞÉúµÄÅäÌ×Éè¼Æ,±³¾°Í¼Æ¬Ãû³Æ
-    var ta = false;                                 //ÊÇ·ñÊÇTaµÄÎ¶µÀ
-    var isboy = false;                              //ÄĞÉú»¹ÊÇÅ®Éú
-    var checkMine;                                  //²é¿´ÎÒµÄÎ¶ÀÙĞÎÏó
-    var paohutaset = false;                         //ÅİÜ½¼ø¶¨Î¶µÀ
+    var rearr = [];                                 //æœ€ç»ˆé€‰æ‹©çš„å£å‘³,å­˜æ”¾ç°æœ‰å£å‘³çš„ä¸‹æ ‡å€¼ï¼Œç”¨æˆ·è¾“å…¥çš„åŸå€¼
+    var boy = 501;                                  //å­˜æ”¾ç”·ç”Ÿçš„é…å¥—è®¾è®¡,èƒŒæ™¯å›¾ç‰‡åç§°
+    var ta = false;                                 //æ˜¯å¦æ˜¯Taçš„å‘³é“
+    var isboy = false;                              //ç”·ç”Ÿè¿˜æ˜¯å¥³ç”Ÿ
+    var checkMine;                                  //æŸ¥çœ‹æˆ‘çš„å‘³è•¾å½¢è±¡
+    var paohutaset = false;                         //æ³¡èŠ™é‰´å®šå‘³é“
 
     /**************************************************** touches event *******************************************************************************/
     $("#outer-container").bind("click", function (e) {
@@ -170,40 +170,40 @@ $(function () {
                 break;
             case "p3-ta":
                 //$(".p7-lady-1").show();
-                ta = true;                                  //TaµÄÎ¶µÀ
+                ta = true;                                  //Taçš„å‘³é“
                 $(".p7-face-1").css("backgroundImage", "url(images/head21.png)");
                 $("#p4").show();
                 break;
             case "p3-check-mine":
                 if (!checkMine) {
-                    alert("ĞÎÏóÉĞÎ´Éè¼ÆÅ¶");
-                } else {                    //ÒÑ¾­Éè¼Æ¹ıĞÎÏóµÄÊ±ºò
+                    alert("å½¢è±¡å°šæœªè®¾è®¡å“¦");
+                } else {                    //å·²ç»è®¾è®¡è¿‡å½¢è±¡çš„æ—¶å€™
                     $("#p11").show().siblings().hide();
                 }
 
                 break;
-            case "p4-btn":                                  //ÎÒ³ĞÅµµ¯²ã
+            case "p4-btn":                                  //æˆ‘æ‰¿è¯ºå¼¹å±‚
                 $("#outer-container").css({ "backgroundSize": "200%", "backgroundPosition": "center bottom" });
-                if (ta) {                                    //²»ÊÇÎÒµÄÎ¶µÀ£¬µ÷µ½ËûµÄÎ¶µÀÊäÈëêÇ³ÆÒ³
+                if (ta) {                                    //ä¸æ˜¯æˆ‘çš„å‘³é“ï¼Œè°ƒåˆ°ä»–çš„å‘³é“è¾“å…¥æ˜µç§°é¡µ
                     $("#p5").show().siblings().hide();
-                } else {                                    //ÎÒµÄÎ¶µÀ
+                } else {                                    //æˆ‘çš„å‘³é“
                     $("#p6").show().siblings().hide();
                 }
                 break;
-            case "p5-start":                                //ËûµÄÎ¶µÀ
+            case "p5-start":                                //ä»–çš„å‘³é“
                 var words = $('#p5 input').val();
                 if (words.length > 0) {
                     if (words.length > 4) {
                         words = words.substring(0, 4);
                         $('#p5 input').val(words);
                     }
-                    $("#p6 .p6-title").text("Äã¾õµÃ" + words + "ÊÇÊ²Ã´ÎÊµÀ£¿")
+                    $("#p6 .p6-title").text("ä½ è§‰å¾—" + words + "æ˜¯ä»€ä¹ˆé—®é“ï¼Ÿ")
                     $("#p5").hide().next().show();
                 } else {
-                    alert("ÇëÊäÈëTAµÄêÇ³Æ»òÃû×Ö");
+                    alert("è¯·è¾“å…¥TAçš„æ˜µç§°æˆ–åå­—");
                 }
                 break;
-            case "p6-ready":                            //Ñ¡ºÃÁËÌá½»
+            case "p6-ready":                            //é€‰å¥½äº†æäº¤
                 btnP6Ready();
                 break;
             case "p6-askfor":
@@ -216,22 +216,22 @@ $(function () {
                 for (var i = 0; i < 3; i++) {
                     $($("img")[parseInt(tastes[i]) - 1]).parent().css({ "background": "rgba(0,0,0,0.5)", "zIndex": "0" });
                 }*/
-                //$("#p6 textarea").val("ÕëÒ¶Ó£ÌÒ¡¢²İİ®¡¢»ÆÌÒ");
-                $("#p6 textarea").val("#ÕæÊµµÄ×Ô¼º£¬ÎŞĞèÎ±×°#Ô­Î¶£¬¾ÍÍ¦ºÃ£¡").attr("readonly", "true");
+                //$("#p6 textarea").val("é’ˆå¶æ¨±æ¡ƒã€è‰è“ã€é»„æ¡ƒ");
+                $("#p6 textarea").val("#çœŸå®çš„è‡ªå·±ï¼Œæ— éœ€ä¼ªè£…#åŸå‘³ï¼Œå°±æŒºå¥½ï¼").attr("readonly", "true");
                 break;
-            case "p6-prev":                                 //Ñ¡Î¶µÀ×óÇĞ»»
+            case "p6-prev":                                 //é€‰å‘³é“å·¦åˆ‡æ¢
                 leftCheck($(".choosebox ul"), 548);
                 break;
-            case "p6-next":                             //Ñ¡Î¶µÀÓÒ±ßÇĞ»»
+            case "p6-next":                             //é€‰å‘³é“å³è¾¹åˆ‡æ¢
                 rightCheck($(".choosebox ul"), 548, -2192);
                 break;
-            case "img":                                 //Ñ¡ÔñÎ¶µÀµã»÷Í¼Æ¬ÑùÊ½ºÍ±³¾°Í¼Æ¬
+            case "img":                                 //é€‰æ‹©å‘³é“ç‚¹å‡»å›¾ç‰‡æ ·å¼å’ŒèƒŒæ™¯å›¾ç‰‡
                 if (!paohutaset) {
                     btnImgs(e);
                 }
 
                 break;
-            case "p7-btn1":             //Ñ¡ÒÂ·ş--¡·×óÑ¡
+            case "p7-btn1":             //é€‰è¡£æœ--ã€‹å·¦é€‰
                 $(".lady").hide();
                 $(".p7-lady").show();
                 //$("#p7-tip").show();
@@ -241,7 +241,7 @@ $(function () {
                     $(".p7-1").css("backgroundImage", "url(images/" + (temp + 201) + ".png)");
                 });
                 break;
-            case "p7-btn2":             //Ñ¡ÒÂ·ş--¡·ÓÒÑ¡
+            case "p7-btn2":             //é€‰è¡£æœ--ã€‹å³é€‰
                 $(".lady").hide();
                 $(".p7-lady").show();
                 //$("#p7-tip").show();
@@ -251,7 +251,7 @@ $(function () {
                     $(".p7-1").css("backgroundImage", "url(images/" + (temp + 201) + ".png)");
                 });
                 break;
-            case "p7-btn3":             //Ñ¡¿ã×Ó--¡·×óÑ¡
+            case "p7-btn3":             //é€‰è£¤å­--ã€‹å·¦é€‰
                 $(".lady").hide();
                 $(".p7-lady").show();
                 showClothes();
@@ -260,7 +260,7 @@ $(function () {
                     $(".p7-2").css("backgroundImage", "url(images/" + (temp + 301) + ".png)");
                 });
                 break;
-            case "p7-btn4":             //Ñ¡¿ã×Ó--¡·ÓÒÑ¡
+            case "p7-btn4":             //é€‰è£¤å­--ã€‹å³é€‰
                 $(".lady").hide();
                 $(".p7-lady").show();
                 showClothes();
@@ -269,7 +269,7 @@ $(function () {
                     $(".p7-2").css("backgroundImage", "url(images/" + (temp + 301) + ".png)");
                 });
                 break;
-            case "p7-btn5":             //Ñ¡Ğ¬×Ó--¡·×óÑ¡
+            case "p7-btn5":             //é€‰é‹å­--ã€‹å·¦é€‰
                 $(".lady").hide();
                 $(".p7-lady").show();
                 $("#p7-tip").show();
@@ -278,7 +278,7 @@ $(function () {
                     $(".p7-3").css("backgroundImage", "url(images/" + (temp + 401) + ".png)");
                 });
                 break;
-            case "p7-btn6":             //Ñ¡Ğ¬×Ó--¡·ÓÒÑ¡
+            case "p7-btn6":             //é€‰é‹å­--ã€‹å³é€‰
                 $(".lady").hide();
                 $(".p7-lady").show();
                 //$("#p7-tip").show();
@@ -288,7 +288,7 @@ $(function () {
                     $(".p7-3").css("backgroundImage", "url(images/" + (temp + 401) + ".png)");
                 });
                 break;
-            case "p7-change":           //Ò»¼ü»»×°
+            case "p7-change":           //ä¸€é”®æ¢è£…
                 $(".lady").show();
                 $(".hideclothes").hide();
                 $(".p7-lady").css("backgroundImage", "none");
@@ -297,7 +297,7 @@ $(function () {
                 $(".p7-lady-1").attr("rd", rd + "");
                 $(".p7-lady-1").css("background", "url(images/" + rd + ".png)").css("background-position", "-20px 4px").show();
                 break;
-            case "p7-askfor":           //ÅİÜ½Ğ¡½ãËæ»úÉè¼ÆµÄÒ»Ì×
+            case "p7-askfor":           //æ³¡èŠ™å°å§éšæœºè®¾è®¡çš„ä¸€å¥—
                 $(".lady").hide();
                 $("#p7-tip").hide();
                 var rd = Math.floor(Math.random() * 3) + 701;
@@ -307,11 +307,11 @@ $(function () {
             case "face":
                 $("#p7-cover").show();
                 break;
-            case "p7-gender":           //Ñ¡ÄĞÉúµÄ
+            case "p7-gender":           //é€‰ç”·ç”Ÿçš„
                 $(".p7-lady-1").hide();
                 $("#p8").show().siblings().hide();
                 break;
-            case "p8-gender":           //Ìø»ØÑ¡Å®ÉúÒ³
+            case "p8-gender":           //è·³å›é€‰å¥³ç”Ÿé¡µ
                 // $(".p7-lady-1").show();
                 if ($(".p7-lady").css("backgroundImage") == "none") {
                     $(".p7-lady-1").show();
@@ -345,7 +345,7 @@ $(function () {
             case "p8-ready":
 
                 $("#p10").show().siblings().hide();
-                isboy = true;                                   //ËµÃ÷Ñ¡µÄÊÇÄĞÉú
+                isboy = true;                                   //è¯´æ˜é€‰çš„æ˜¯ç”·ç”Ÿ
                 break;
             case "p10-shake":
                 $(".p10-img").addClass("shake");
@@ -353,7 +353,7 @@ $(function () {
                     $(".p10-img").removeClass("shake");
                     if (!ta) {
                         checkMine = true;
-                        $("#p11").show().siblings().hide();             //×Ô¼º£¬(¡°ÄĞ¡±/¡°Å®¡±)
+                        $("#p11").show().siblings().hide();             //è‡ªå·±ï¼Œ(â€œç”·â€/â€œå¥³â€)
                         if (!paohutaset) {
                             for (var i = 0; i < 3; i++) {
                                 if (!isNaN(parseInt(rearr[i]))) {
@@ -373,9 +373,9 @@ $(function () {
                         } else {
                             for (var i = 0; i < 3; i++) {
                                 $(".p11-taste").eq(i).css("backgroundImage", "");
-                                //$(".p11-taste").eq(i).text("Ô­Î¶");
+                                //$(".p11-taste").eq(i).text("åŸå‘³");
                             }
-							var div = $("<div class='paohutaset' style='width:150px; height:100px;position:absolute;left:185px; top:477px; font-size:64px;'>Ô­Î¶</div>");
+							var div = $("<div class='paohutaset' style='width:150px; height:100px;position:absolute;left:185px; top:477px; font-size:64px;'>åŸå‘³</div>");
 							$("#p11 .content").append(div);
                         }
 
@@ -385,21 +385,21 @@ $(function () {
                             $(".p7-lady-1").hide();
 
                             $(".p11-people").css("backgroundImage", "url(images/" + boy + ".png)");
-                        } else {        //ÊÇÅ®º¢
+                        } else {        //æ˜¯å¥³å­©
                             var bg = parseInt($(".p7-lady-1").attr("rd"));
-                            if (isNaN(bg)) {    //ËµÃ÷ÊÇÕı³£»»×°
+                            if (isNaN(bg)) {    //è¯´æ˜æ˜¯æ­£å¸¸æ¢è£…
                                 drawAvatar(document.getElementById("canvas11"));
                                 $(".p11-people .hideclothes").show();
                                 $(".p11-people").css("backgroundImage", "");
                             } else {
-                                if (bg < 700) {     //Ò»¼ü»»×°
+                                if (bg < 700) {     //ä¸€é”®æ¢è£…
                                     drawAvatar(document.getElementById("canvas11"));
                                     $(".p11-people .hideclothes").hide();
                                     $(".p11-people").css("backgroundImage", "");
 
                                     $(".zoomgirl").show();
 
-                                } else {            //ÅİÜ½ÍÆ¼ö
+                                } else {            //æ³¡èŠ™æ¨è
                                     $(".p11-people .zoomgirl").hide();
                                     $(".p11-people .zoomlady").hide();
                                     $(".p11-people").css("backgroundImage", $(".p7-lady-1").css("backgroundImage"));
@@ -407,8 +407,8 @@ $(function () {
                             }
                         }
                     } else {
-                        $("#p12").show().siblings().hide();             //Ta£¬(¡°ÄĞ¡±/¡°Å®¡±)
-                        $(".p12-title").text("ÄãĞÄÄ¿ÖĞµÄ" + $('#p5 input').val());
+                        $("#p12").show().siblings().hide();             //Taï¼Œ(â€œç”·â€/â€œå¥³â€)
+                        $(".p12-title").text("ä½ å¿ƒç›®ä¸­çš„" + $('#p5 input').val());
                         if (!paohutaset) {
                             for (var i = 0; i < 3; i++) {
                                 if (!isNaN(parseInt(rearr[i]))) {
@@ -433,11 +433,11 @@ $(function () {
                         } else {
                             for (var i = 0; i < 3; i++) {
                                 $(".p12-taste").eq(i).css("backgroundImage", "");
-                                //$(".p12-taste").eq(i).text("Ô­Î¶");
+                                //$(".p12-taste").eq(i).text("åŸå‘³");
                                 $(".p17-taste").eq(i).css("backgroundImage", "");
-                                //$(".p17-taste").eq(i).text("Ô­Î¶");
+                                //$(".p17-taste").eq(i).text("åŸå‘³");
                             }
-							var div = $("<div class='paohutaset' style='width:150px; height:100px;position:absolute;left:185px; top:477px; font-size:64px;'>Ô­Î¶</div>");
+							var div = $("<div class='paohutaset' style='width:150px; height:100px;position:absolute;left:185px; top:477px; font-size:64px;'>åŸå‘³</div>");
 							$("#p12 .content").append(div);
                         }
                         if (isboy) {
@@ -447,7 +447,7 @@ $(function () {
                             $(".p17-people").css("backgroundImage", "url(images/" + boy + ".png)");
                         } else {
                             var bg = parseInt($(".p7-lady-1").attr("rd"));
-                            if (isNaN(bg)) {    //ËµÃ÷ÊÇÕı³£»»×°
+                            if (isNaN(bg)) {    //è¯´æ˜æ˜¯æ­£å¸¸æ¢è£…
                                 drawAvatar(document.getElementById("canvas12"));
                                 $(".p12-people .hideclothes").show();
                                 $(".p12-people").css("backgroundImage", "");
@@ -456,14 +456,14 @@ $(function () {
                                 $(".p17-people .hideclothes").show();
                                 $(".p17-people").css("backgroundImage", "");
                             } else {
-                                if (bg < 700) {     //Ò»¼ü»»×°
+                                if (bg < 700) {     //ä¸€é”®æ¢è£…
                                     drawAvatar(document.getElementById("canvas12"));
                                     $(".p12-people .hideclothes").hide();
                                     $(".p12-people").css("backgroundImage", "");
                                     drawAvatar(document.getElementById("canvas17"));
                                     $(".p17-people .hideclothes").hide();
                                     $(".p17-people").css("backgroundImage", "");
-                                } else {            //ÅİÜ½ÍÆ¼ö
+                                } else {            //æ³¡èŠ™æ¨è
                                     $(".p12-people .zoomgirl").hide();
                                     $(".p12-people .zoomlady").hide();
                                     $(".p12-people").css("backgroundImage", $(".p7-lady-1").css("backgroundImage"));
@@ -482,7 +482,7 @@ $(function () {
 
                 }, 800);
                 break;
-            case "p11-backchoose":                  //ÖØĞÂ×Ô¼ºµÄĞÎÏó
+            case "p11-backchoose":                  //é‡æ–°è‡ªå·±çš„å½¢è±¡
                 initialData();
                 $("#p3").show().siblings().hide();
                 break;
@@ -490,20 +490,20 @@ $(function () {
 
                 $("#p13").show().siblings().hide();
 				if(!paohutaset){
-					$(".p13-taste").eq(0).css("backgroundImage", $(".p11-taste").eq(0).css("backgroundImage")); //Í¬²½µ½p13
+					$(".p13-taste").eq(0).css("backgroundImage", $(".p11-taste").eq(0).css("backgroundImage")); //åŒæ­¥åˆ°p13
 					$(".p13-taste").eq(0).text($(".p11-taste").eq(0).text());
 					$(".p13-taste").eq(1).css("backgroundImage", $(".p11-taste").eq(1).css("backgroundImage"));
 					$(".p13-taste").eq(1).text($(".p11-taste").eq(0).text());
 					$(".p13-taste").eq(2).css("backgroundImage", $(".p11-taste").eq(2).css("backgroundImage"));
 					$(".p13-taste").eq(2).text($(".p11-taste").eq(0).text());
-					$(".p16-taste").eq(0).css("backgroundImage", $(".p11-taste").eq(0).css("backgroundImage")); //Í¬²½µ½p16
+					$(".p16-taste").eq(0).css("backgroundImage", $(".p11-taste").eq(0).css("backgroundImage")); //åŒæ­¥åˆ°p16
 					$(".p16-taste").eq(0).text($(".p11-taste").eq(0).text());
 					$(".p16-taste").eq(1).css("backgroundImage", $(".p11-taste").eq(1).css("backgroundImage"));
 					$(".p16-taste").eq(1).text($(".p11-taste").eq(0).text());
 					$(".p16-taste").eq(2).css("backgroundImage", $(".p11-taste").eq(2).css("backgroundImage"));
 					$(".p16-taste").eq(2).text($(".p11-taste").eq(0).text());
 				}else{
-					var div = $("<div class='paohutaset' style='width:150px; height:100px;position:absolute;left:185px; top:390px; font-size:64px;'>Ô­Î¶</div>");
+					var div = $("<div class='paohutaset' style='width:150px; height:100px;position:absolute;left:185px; top:390px; font-size:64px;'>åŸå‘³</div>");
 					$("#p13 .content").append(div);
 				}
                 
@@ -512,16 +512,16 @@ $(function () {
                     $(".p13-people").css("backgroundImage", $(".p11-people").css("backgroundImage"));
                 } else {
                     var bg = parseInt($(".p7-lady-1").attr("rd"));
-                    if (isNaN(bg)) {    //ËµÃ÷ÊÇÕı³£»»×°
+                    if (isNaN(bg)) {    //è¯´æ˜æ˜¯æ­£å¸¸æ¢è£…
                         drawAvatar(document.getElementById("canvas13"));
                         $(".p13-people .hideclothes").show();
                         $(".p13-people").css("backgroundImage", "");
                     } else {
-                        if (bg < 700) {     //Ò»¼ü»»×°
+                        if (bg < 700) {     //ä¸€é”®æ¢è£…
                             drawAvatar(document.getElementById("canvas13"));
                             $(".p13-people .hideclothes").hide();
                             $(".p13-people").css("backgroundImage", "");
-                        } else {            //ÅİÜ½ÍÆ¼ö
+                        } else {            //æ³¡èŠ™æ¨è
                             $(".p13-people .zoomgirl").hide();
                             $(".p13-people .zoomlady").hide();
                             $(".p13-people").css("backgroundImage", $(".p7-lady-1").css("backgroundImage"));
@@ -538,14 +538,14 @@ $(function () {
                 //history.go(0);
                 break;
             case "p12-suprise":
-                //location.href = "";     //ÌìÃ¨µØÖ·
+                //location.href = "";     //å¤©çŒ«åœ°å€
                 break;
             case "p13-reset":
                 initialData();
                 $("#p3").show().siblings().hide();
                 break;
             case "p13-suprise":
-                //location.href = "";     //ÌìÃ¨µØÖ·
+                //location.href = "";     //å¤©çŒ«åœ°å€
                 break;
             case "p13-know":
                 $("#p15").show();
@@ -563,16 +563,16 @@ $(function () {
                 $("#p18").show();
                 break;
             case "p18-disagree":
-                //location.href = "";                       //Ê×Ò³µØÖ·
+                //location.href = "";                       //é¦–é¡µåœ°å€
                 break;
             case "p16-reset":
-                //location.href = "";                       //Ê×Ò³µØÖ·
+                //location.href = "";                       //é¦–é¡µåœ°å€
                 break;
             case "p16 - play":
-                //location.href = "";                       //Ê×Ò³µØÖ·
+                //location.href = "";                       //é¦–é¡µåœ°å€
                 break;
             case "p16-check":
-                //location.href = "";                       //ÌìÃ¨µØÖ·
+                //location.href = "";                       //å¤©çŒ«åœ°å€
                 break;
             case "p16-say":
                 $("#p16-1").show();
@@ -587,13 +587,13 @@ $(function () {
                 $("#p18").show();
                 break;
             case "p17-reset":
-                //location.href = "";                       //Ê×Ò³µØÖ·
+                //location.href = "";                       //é¦–é¡µåœ°å€
                 break;
             case "p17-play":
-                //location.href = "";                       //Ê×Ò³µØÖ·
+                //location.href = "";                       //é¦–é¡µåœ°å€
                 break;
             case "p17-suprise":
-                //location.href = "";                        //ÌìÃ¨µØÖ·
+                //location.href = "";                        //å¤©çŒ«åœ°å€
                 break;
             case "p7-cover-btn":
                 $(".p7-face-1").css("backgroundImage", "none");
@@ -633,10 +633,10 @@ $(function () {
     var startX1, startX2, endX1, endX2, startY1, startY2, endY1, endY2, posX, posY;
     himg.src = "images/test.png";
     himg.onload = function () {
-        $(".imgb").append(himg);            //¼ÓÍ¼Æ¬
+        $(".imgb").append(himg);            //åŠ å›¾ç‰‡
         w = himg.width;
         h = himg.height;
-        $("#moveobj").bind("touchstart", function (e) { //µ¯²ãÉÏµÄdivÊÂ¼ş
+        $("#moveobj").bind("touchstart", function (e) { //å¼¹å±‚ä¸Šçš„diväº‹ä»¶
             console.log(w + "," + h);
             if (e.originalEvent.touches.length == 1) {
                 posX = parseFloat($(".imgbox img").css("left"));
@@ -669,15 +669,15 @@ $(function () {
 
 
             if (e.originalEvent.touches.length == 2) {
-                endX1 = e.originalEvent.touches[0].pageX * 1 / scale;     //Á½µãµÄ×ø±ê
+                endX1 = e.originalEvent.touches[0].pageX * 1 / scale;     //ä¸¤ç‚¹çš„åæ ‡
                 endY1 = e.originalEvent.touches[0].pageY * 1 / scale;
                 endX2 = e.originalEvent.touches[1].pageX * 1 / scale;
                 endY2 = e.originalEvent.touches[1].pageY * 1 / scale;
 
-                var beginx = Math.abs(startX2 - startX1);       //Á½µã³õÊ¼x¾àÀë
-                var beginy = Math.abs(startY2 - startY1);      //Á½µã³õÊ¼Y¾àÀë
-                var endx = Math.abs(endX2 - endX1);         //ÒÆ¶¯ºóÁ½µãµÄx¾àÀë
-                var endy = Math.abs(endY2 - endY1);         //ÒÆ¶¯ºóÁ½µãyµÄ¾àÀë
+                var beginx = Math.abs(startX2 - startX1);       //ä¸¤ç‚¹åˆå§‹xè·ç¦»
+                var beginy = Math.abs(startY2 - startY1);      //ä¸¤ç‚¹åˆå§‹Yè·ç¦»
+                var endx = Math.abs(endX2 - endX1);         //ç§»åŠ¨åä¸¤ç‚¹çš„xè·ç¦»
+                var endy = Math.abs(endY2 - endY1);         //ç§»åŠ¨åä¸¤ç‚¹yçš„è·ç¦»
                 var spacex = endx - beginx;
                 var spacey = endy - beginy;
 
@@ -720,7 +720,7 @@ $(function () {
 
     /******************************************* function define *********************************************************************/
 
-    //============>°Ë¸öÆøÅİ°´Å¥<======================================
+    //============>å…«ä¸ªæ°”æ³¡æŒ‰é’®<======================================
 
     var canvas;
     var ctx;
@@ -795,16 +795,16 @@ $(function () {
 
 
 
-    //============>Î¶µÀÑ¡ºÃÁË°´Å¥<======================================
+    //============>å‘³é“é€‰å¥½äº†æŒ‰é’®<======================================
     var btnP6Ready = function () {
-        if (!ta) {                                                          //ÎªË­Ñ¡ĞÎÏó
-            $(".p8-title").text("Îª×Ô¼ºÌô¸öĞÎÏó°É~");
+        if (!ta) {                                                          //ä¸ºè°é€‰å½¢è±¡
+            $(".p8-title").text("ä¸ºè‡ªå·±æŒ‘ä¸ªå½¢è±¡å§~");
         } else {
-            $(".p8-title").text("Îª" + $('#p5 input').val() + "Ìô¸öĞÎÏó°É~");
+            $(".p8-title").text("ä¸º" + $('#p5 input').val() + "æŒ‘ä¸ªå½¢è±¡å§~");
         }
-        var tastestemp = $("#p6 textarea").val();   //ÎÄ±¾¿òµÄÖµ
-        var temparr = tastestemp.split('¡¢');        //·Ö¸ô³ÉÊı×é                      
-        var deleteBlank = function (arr) {              //É¾³ı¿Õ°×Êı¾İ
+        var tastestemp = $("#p6 textarea").val();   //æ–‡æœ¬æ¡†çš„å€¼
+        var temparr = tastestemp.split('ã€');        //åˆ†éš”æˆæ•°ç»„                      
+        var deleteBlank = function (arr) {              //åˆ é™¤ç©ºç™½æ•°æ®
             for (var i = 0; i < arr.length; i++) {
                 if (arr[i] == "") {
                     arr.splice(i, 1);
@@ -815,10 +815,10 @@ $(function () {
         deleteBlank(temparr);
 
         if (temparr.length > 3) {
-            alert("³¬¹ıÈıÖÖ¿ÚÎ¶ÁË");
+            alert("è¶…è¿‡ä¸‰ç§å£å‘³äº†");
             return;
         }
-        //±éÀúÊÇ·ñÊÇÊÖ¶¯ÊäÈëµÄ
+        //éå†æ˜¯å¦æ˜¯æ‰‹åŠ¨è¾“å…¥çš„
 
         for (var i = 0; i < temparr.length; i++) {
             var flag = false;
@@ -845,7 +845,7 @@ $(function () {
         }
     }
 
-    //============>Ñ¡Î¶µÀ£¬Ñ¡ÖĞÓëÎ´Ñ¡ÖĞµÄÇĞ»»<======================================
+    //============>é€‰å‘³é“ï¼Œé€‰ä¸­ä¸æœªé€‰ä¸­çš„åˆ‡æ¢<======================================
     var btnImgs = function (e) {
         //console.log($(e.target).parent().css("zIndex"));
         if ($(e.target).parent().css("zIndex") == "1") {
@@ -857,11 +857,11 @@ $(function () {
                 if (tastes.length == 3) {
                     $("#p6 textarea").val($("#p6 textarea").val() + taste[bgNo]);
                 } else {
-                    $("#p6 textarea").val($("#p6 textarea").val() + taste[bgNo] + "¡¢");
+                    $("#p6 textarea").val($("#p6 textarea").val() + taste[bgNo] + "ã€");
                 }
                 //console.log(tastes);
             } else {
-                alert("×î¶àÖ»ÄÜÑ¡Ôñ3×Ü¿ÚÎ¶Å¶£¡");
+                alert("æœ€å¤šåªèƒ½é€‰æ‹©3æ€»å£å‘³å“¦ï¼");
             }
 
         } else {
@@ -878,17 +878,17 @@ $(function () {
             tastes.sort();
             $("#p6 textarea").val("");
             for (var j = 0; j < tastes.length; j++) {
-                $("#p6 textarea").val($("#p6 textarea").val() + taste[tastes[j]] + "¡¢");
+                $("#p6 textarea").val($("#p6 textarea").val() + taste[tastes[j]] + "ã€");
             }
         }
     }
 
-    //=======================>×óÇĞ¹¤¾ß(¸´ÓÃ)<===================================
+    //=======================>å·¦åˆ‡å·¥å…·(å¤ç”¨)<===================================
     var leftCheck = function (obj, space, callback) {
         if (!animateflag) {
             animateflag = true;
             if (parseInt(obj.css("left")) >= 0) {
-                alert("Ã»ÓĞÁËÀ²");
+                alert("æ²¡æœ‰äº†å•¦");
                 animateflag = false;
             } else {
                 obj.animate({ "left": (parseInt(obj.css("left")) + space) + "px" }, "normal", function () {
@@ -904,12 +904,12 @@ $(function () {
         }
 
     }
-    //=======================>ÓÒÇĞ¹¤¾ß(¸´ÓÃ)<===================================
+    //=======================>å³åˆ‡å·¥å…·(å¤ç”¨)<===================================
     var rightCheck = function (obj, space, lastPos, callback) {
         if (!animateflag) {
             animateflag = true;
             if (parseInt(obj.css("left")) <= lastPos) {
-                alert("Ã»ÓĞÁËÀ²");
+                alert("æ²¡æœ‰äº†å•¦");
                 animateflag = false;
             } else {
                 obj.animate({ "left": (parseInt(obj.css("left")) - space) + "px" }, "normal", function () {
@@ -925,7 +925,7 @@ $(function () {
 
     }
 
-    //===========================¡·ÉèÖÃdivµÄ´óĞ¡ºÍ¼ÓÔØÍ¼Æ¬¡¶=========================================
+    //===========================ã€‹è®¾ç½®divçš„å¤§å°å’ŒåŠ è½½å›¾ç‰‡ã€Š=========================================
     var loadDivImage = function () {
         for (var i = 0; i < 8; i++) {
             imgs[i].onload = function () {
@@ -943,7 +943,7 @@ $(function () {
     }();
     $(".p7-btn:odd").css("left", "551px");
 
-    //================================¡·³õÊ¼Êı¾İ¡¶================================================
+    //================================ã€‹åˆå§‹æ•°æ®ã€Š================================================
     var initialData = function () {
         $("#p6 textarea").val("").removeAttr("readonly");
         paohutaset = false;

@@ -1,4 +1,4 @@
-$(function () {
+ï»¿$(function () {
     $(window).on('scroll.elasticity', function (e) {
         e.preventDefault();
     }).on('touchmove.elasticity', function (e) {
@@ -56,7 +56,7 @@ $(function () {
             }, 500);
         } else if (startY - endY < -100 && endY != null) {
             if (flag == false) {
-                alert("ÒÑ¾­ÊÇµÚÒ»Ò³");
+                alert("å·²ç»æ˜¯ç¬¬ä¸€é¡µ");
             } else {
                 clearInterval(cloud);
                 $("#p1").removeClass("scaleNomalPage").addClass("scaleSmallPage");
@@ -495,8 +495,8 @@ $(function () {
 	$(".link").bind("click",function(){
 		location.href="http://ford-edge.ser2.ford001.com/jnz.html";
 	});
-    /**********º¯Êý¶¨Òå*************/
-    //½øÈëµÚÒ»Ò³
+    /**********å‡½æ•°å®šä¹‰*************/
+    //è¿›å…¥ç¬¬ä¸€é¡µ
     var cloud;
     function enterP1() {
         $("#logo").css("backgroundImage", "url(img/logo.png)");
@@ -529,7 +529,7 @@ $(function () {
 
         }, 2000);
     }
-    //½øÈëµÚ¶þÒ³
+    //è¿›å…¥ç¬¬äºŒé¡µ
     function enterP2() {
         //$(".p2-circle-once").css("backgroundImage","url(img/circle-once.gif?"+gif+")");
         //gif++;
@@ -558,7 +558,7 @@ $(function () {
             });
         });
     }
-    //½øÈëµÚÈýÒ³
+    //è¿›å…¥ç¬¬ä¸‰é¡µ
     function enterP3() {
         //$(".p3-circle-once").css("backgroundImage","url(img/circle-once.gif?"+gif+")");
         //gif++;
@@ -580,7 +580,7 @@ $(function () {
         });
     }
 
-    //½øÈëµÚËÄÒ³
+    //è¿›å…¥ç¬¬å››é¡µ
     function enterP4() {
         $("#p3-circle").removeClass("p3-circle-once");
         $("#arrow").hide();
@@ -589,7 +589,7 @@ $(function () {
         $(".p4-word-2").addClass("p4-word-animation");
         $(".p4-start-1").addClass("p4-start-animation");
     }
-    //½øÈëµÚÎåÒ³
+    //è¿›å…¥ç¬¬äº”é¡µ
     function enterP5() {
         $(".p5-img-3").hide();
         $("#logo").css("backgroundImage", "url(img/logo.png)");
@@ -611,7 +611,7 @@ $(function () {
         });
     }
 
-    //½øÈëµÚÁùÒ³
+    //è¿›å…¥ç¬¬å…­é¡µ
     function enterP6() {
 
         $(".p6-car").css("backgroundImage", "url(img/p6-car-1.png)");
@@ -629,7 +629,7 @@ $(function () {
         });
     }
 
-    //½øÈëµÚÆßÒ³
+    //è¿›å…¥ç¬¬ä¸ƒé¡µ
     function enterP7() {
         $(".p7-title").css("left", "-87px");
         $(".p7-img-2").hide();
@@ -651,7 +651,7 @@ $(function () {
         }, 2000);
     }
 
-    //½øÈëµÚ°ËÒ³
+    //è¿›å…¥ç¬¬å…«é¡µ
     function enterP8() {
         $(".p8-img-2").hide();
         $(".p8-words").hide();
@@ -673,7 +673,7 @@ $(function () {
         });
     }
 
-    //½øÈëµÚ¾ÅÒ³
+    //è¿›å…¥ç¬¬ä¹é¡µ
     function enterP9() {
         $(".p9-title").hide();
         $(".p9-words").hide();
@@ -695,7 +695,7 @@ $(function () {
             }, 1000);
         });
     }
-    //½øÈëµÚÊ®Ò³
+    //è¿›å…¥ç¬¬åé¡µ
     function enterP10() {
         $(".p10-words").hide();
         $(".p10-img-2").hide();
@@ -726,7 +726,7 @@ $(function () {
             }, 1000);
         });
     }
-    //½øÈëµÚÊ®Ò»Ò³
+    //è¿›å…¥ç¬¬åä¸€é¡µ
     function enterP11() {
 		$(".link").hide();
         $("#logo").css("backgroundImage", "url(img/logo2.png)");
@@ -783,7 +783,7 @@ $(function () {
                 loadCount++;
                 $(images[i]).bind("load", function (e) {
                     percent += 100 / imgsstr.length;
-                    $("#loading .content").text("ÒÑ¼ÓÔØ" + parseInt(percent) + "%");
+                    $("#loading .content").text("å·²åŠ è½½" + parseInt(percent) + "%");
                     loadCount--;
                     if (loadCount == 0) {
                         $("#loading").hide();

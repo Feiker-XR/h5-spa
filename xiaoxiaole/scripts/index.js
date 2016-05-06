@@ -1,4 +1,4 @@
-var game;
+﻿var game;
 var timecount = 0;
 $(function () {
     /** ===>>>for ios **/

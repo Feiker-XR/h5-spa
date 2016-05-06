@@ -1,4 +1,4 @@
-var game;
+ï»¿var game;
 var ispause = false;
 $(function () {
     /** ===>>>for ios **/
@@ -10,7 +10,7 @@ $(function () {
 
     /** ===>>>scale settings (The standard size:640*1008) **/
     var scale;
-    $("#outer-container,.page").css({ "width": window.innerWidth + "px", "height": window.innerHeight + "px" }).hide();   //set container as device size£¬hide the pages
+    $("#outer-container,.page").css({ "width": window.innerWidth + "px", "height": window.innerHeight + "px" }).hide();   //set container as device sizeï¼Œhide the pages
     $("#outer-container").show();																				 //show container
     $("#loading").show();																						 //show loading
     scale = window.innerHeight / 1008 < window.innerWidth / 640 ? window.innerHeight / 1008 : window.innerWidth / 640;	 //confirm the scale proportion
@@ -35,13 +35,13 @@ $(function () {
             case 'p3-close':
                 $("#p3").hide();
                 break;
-            case 'p4-button-start':             //½øÈëÓÎÏ·½çÃæ
+            case 'p4-button-start':             //è¿›å…¥æ¸¸æˆç•Œé¢
                 $("#p5").show();
                 game.start();
                 break;
-            case 'p6-button-draw':              //ĞèÒªÏÔÊ¾µÄ³é½±½á¹û
+            case 'p6-button-draw':              //éœ€è¦æ˜¾ç¤ºçš„æŠ½å¥–ç»“æœ
                 $("#p6").hide();
-                var random = Math.floor(Math.random() * 10000) % 4;  //Ç°Ì¨Ëæ»ú²âÊÔ
+                var random = Math.floor(Math.random() * 10000) % 4;  //å‰å°éšæœºæµ‹è¯•
                 if (random == 0) {
                     $("#p7").show();
                 } else if (random == 1) {
@@ -51,31 +51,31 @@ $(function () {
                 } else if (random == 3) {
                     $("#p10").show();
                 } else {
-                    alert("Ã»ÓĞ´ËÑ¡Ïî£¡");
+                    alert("æ²¡æœ‰æ­¤é€‰é¡¹ï¼");
                 }
                 break;
             case 'p7-go-tmall':
-                location.href = "";             //ÖĞ½±·á¹È´ú½ğÈ¯£¬ÌìÃ¨µêµÄµØÖ·
+                location.href = "";             //ä¸­å¥–ä¸°è°·ä»£é‡‘åˆ¸ï¼Œå¤©çŒ«åº—çš„åœ°å€
                 break;
             case 'p7-go-weibo':
-                location.href = "";             //Î¢²©µØÖ·
+                location.href = "";             //å¾®åšåœ°å€
                 break;
             case 'p8-go-wxstore':
-                location.href = "";             //ÖĞ½±·á¹È´ú½ğÈ¯£¬Î¢µêµØÖ·
+                location.href = "";             //ä¸­å¥–ä¸°è°·ä»£é‡‘åˆ¸ï¼Œå¾®åº—åœ°å€
                 alert("1");
                 break;
             case 'p8-go-weixin':
-                location.href = "";             //Î¢ĞÅµØÖ·£¬¿ÉÄÜÊÇÌáÊ¾·ÖÏíµ½ÅóÓÑÈ¦
+                location.href = "";             //å¾®ä¿¡åœ°å€ï¼Œå¯èƒ½æ˜¯æç¤ºåˆ†äº«åˆ°æœ‹å‹åœˆ
                 alert("2");
                 break;
-            case 'p9-submit':                  //ÖĞ½±ÂÃĞĞÏä£¬ÌîĞ´ĞÅÏ¢
+            case 'p9-submit':                  //ä¸­å¥–æ—…è¡Œç®±ï¼Œå¡«å†™ä¿¡æ¯
                 checkSubInfo();
                 break;
             case 'p10-flaunt':
-                //alert("ìÅÒ«Ò»ÏÂ£¡");
+                //alert("ç‚«è€€ä¸€ä¸‹ï¼");
 				$("#curtion").show();
                 break;
-            case 'p5-pause':                    //ÔİÍ£°´Å¥
+            case 'p5-pause':                    //æš‚åœæŒ‰é’®
                 if (!ispause) {
                     game.pause();
                 } else {
@@ -97,7 +97,7 @@ $(function () {
     $(".picbox img").bind("touchmove", function (e) {
         e.stopPropagation();
     })
-    //ÒÆ¶¯ÈË
+    //ç§»åŠ¨äºº
     var startX;
     var endX;
     var originPosLeft;
@@ -193,7 +193,7 @@ $(function () {
             clearInterval(addinterval);
         }
 
-        this.checkPosition = function (pic, speed, atime) { //²ÎÊı£ºÍ¼Æ¬¶ÔÏó£¬Ã¿Ò»´ÎÏÂÂäµÄÏñËØÖµ£¬Ê±¼ä¼ä¸ô
+        this.checkPosition = function (pic, speed, atime) { //å‚æ•°ï¼šå›¾ç‰‡å¯¹è±¡ï¼Œæ¯ä¸€æ¬¡ä¸‹è½çš„åƒç´ å€¼ï¼Œæ—¶é—´é—´éš”
             var ptop = parseInt($(pic).css("top"));
             picinterval = setInterval(function () {
                 if (!ispause) {
@@ -201,17 +201,17 @@ $(function () {
                     ptop += speed;
                     var vspace = parseInt($("#p5 .p5-boy").css("top")) + parseInt($("#p5 .p5-boy").css("height")) / 2 - parseInt($(pic).css("top")) + parseInt($(pic).css("height")) / 2;
                     var hspace = Math.abs(parseInt($("#p5 .p5-boy").css("left")) + parseInt($("#p5 .p5-boy").css("width")) / 2 - (parseInt($(pic).css("left")) + parseInt($(pic).css("width")) / 2));
-                    if (vspace > 0 && vspace < parseInt($(pic).css("height")) / 2 && hspace >= 0 && hspace < parseInt($(pic).css("width")) / 2) {    //Á½¸öÍ¼Æ¬µÄÖĞĞÄµãµÄ¾àÀëÊÇ·ñĞ¡ÓÚÏÂÂäÍ¼Æ¬µÄÒ»°ë
-                        var index = parseInt(pic.src.split("/")[pic.src.split("/").length - 1].substring(0, 1)); //±³¾°Í¼Æ¬
+                    if (vspace > 0 && vspace < parseInt($(pic).css("height")) / 2 && hspace >= 0 && hspace < parseInt($(pic).css("width")) / 2) {    //ä¸¤ä¸ªå›¾ç‰‡çš„ä¸­å¿ƒç‚¹çš„è·ç¦»æ˜¯å¦å°äºä¸‹è½å›¾ç‰‡çš„ä¸€åŠ
+                        var index = parseInt(pic.src.split("/")[pic.src.split("/").length - 1].substring(0, 1)); //èƒŒæ™¯å›¾ç‰‡
                         if (index < 5) {	
-                            score += 25;										//¼Ó·Ö
+                            score += 25;										//åŠ åˆ†
                             $("#p5 .p5-scores").text(score);
                             if (score >= 200) {
                                 self.end();
                                 $("#p6").show();
                             }
                         } else {
-                            score -= 25;							//¼õ·Ö
+                            score -= 25;							//å‡åˆ†
                             $("#p5 .p5-scores").text(score);
                         }
 
@@ -234,26 +234,26 @@ $(function () {
 
 
 
-    //Ìá½»ĞÅÏ¢¼ì²é
+    //æäº¤ä¿¡æ¯æ£€æŸ¥
     var checkSubInfo = function () {
         var name = $(".p9-name").val();
         var phone = $(".p9-phone").val();
         var address = $(".p9-address").val();
         var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
         if (name == '' || name == null) {
-            alert("ÇëÊäÈëÄúµÄĞÕÃû");
+            alert("è¯·è¾“å…¥æ‚¨çš„å§“å");
             return;
         }
         if (phone == '' || phone == null) {
-            alert("ÇëÊäÈëÄúµÄÁªÏµµç»°");
+            alert("è¯·è¾“å…¥æ‚¨çš„è”ç³»ç”µè¯");
             return;
         }
         if (!reg.test(phone)) {
-            alert("ÊÖ»úºÅÂë²»ÕıÈ·~");
+            alert("æ‰‹æœºå·ç ä¸æ­£ç¡®~");
             return;
         }
         if (address == '' || address == null) {
-            alert("ÇëÊäÈëÄúµÄµØÖ·");
+            alert("è¯·è¾“å…¥æ‚¨çš„åœ°å€");
             return;
         }
     }
