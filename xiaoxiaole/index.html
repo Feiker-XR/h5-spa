@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="text/css" rel="stylesheet" href="style/index.css" />
+    <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <title>我爱消消乐</title>
+</head>
+
+<body>
+    <div id="outer-container">
+
+        <audio autoplay loop src="style/bg.mp3" id="audiobg"></audio>
+        <audio src="style/sound.mp3" id="sound"></audio>
+        <div id="music" sign="0"></div>
+
+
+        <div class="page" id="loading"><div class="content"></div></div>
+
+        <div class="page" id="p1">
+            <div class="content">
+                <div class="p1-circle">
+                    <div class="p1-something"></div>
+                </div>
+                <div class="p1-star"></div>
+                <div class="p1-redbox">
+                    <div class="p1-words"></div>
+                </div>
+                <div class="p1-button-start"></div>
+                <div class="p1-button-rule"></div>
+                <div class="p1-button-rank"></div>
+            </div>
+            <div class="p1bg">
+                <div class="p1bg-contain">
+                    <div class="p1-road"></div>
+                    <div class="p1-cars"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="p2">
+            <div class="content">
+                <div class="p2-button-close"></div>
+                <div class="p2-go-store"></div>
+                <div class="p2-go-regist"></div>
+                <div class="p1-button-start"></div>
+            </div>
+        </div>
+
+        <div class="page" id="p3">
+            <div class="content">
+                <div class="p3-user-score"><p></p><span>0</span></div>
+                <div class="p3-scores"><p></p><span>0</span></div>
+                <div class="p3-timer"><span>1</span>:<span>30</span></div>
+                <div class="p3-time-bar"></div>
+                <div class="gamebox"></div>
+            </div>
+        </div>
+
+        <div class="page" id="p4">
+            <div class="content">
+                <div class="p4-rate"></div>
+                <div class="p4-scores"></div>
+                <div class="p4-play-again"></div>
+                <div class="p4-share"></div>
+                <div class="p4-close"></div>
+            </div>
+        </div>
+
+        <div class="page" id="p5">
+            <div class="content">
+                <div class="p5-close"></div>
+                <div class="ulbox">
+                    <ul>
+                        <li><div class="p5-rank"></div><div class="p5-img"></div><div class="p5-name">1cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                        <li><div class="p5-rank"></div><div class="p5-img"></div><div class="p5-name">2cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                        <li><div class="p5-rank"></div><div class="p5-img"></div><div class="p5-name">3cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                        <li><div class="p5-rank">4</div><div class="p5-img"></div><div class="p5-name">4cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                        <li><div class="p5-rank">5</div><div class="p5-img"></div><div class="p5-name">5cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                        <li><div class="p5-rank">6</div><div class="p5-img"></div><div class="p5-name">6cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                        <li><div class="p5-rank">7</div><div class="p5-img"></div><div class="p5-name">7cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                        <li><div class="p5-rank">8</div><div class="p5-img"></div><div class="p5-name">8cc_貓_8070</div><div class="p5-scores">440.55.543分</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!--非会员游戏结束显示的画面-->
+        <div class="page" id="p6">
+            <div class="content">
+                <div class="p4-play-again"></div>
+                <div class="p4-share"></div>
+                <div class="p4-close"></div>
+                <div class="p2-go-regist"></div>
+            </div>
+        </div>
+<!--会员游戏次数用光了的页面-->
+        <div class="page" id="p7">
+            <div class="content">
+                <div class="p7-close"></div>
+                <div class="p7-button1"></div>
+                <div class="p7-button2"></div>
+            </div>
+        </div>
+<!--分享出去后该页为显示状态,已单独出来-->
+      <!--  <div class="page" id="p8">
+            <div class="content">
+                <div class="p8-head">头像</div>
+                <div class="p8-name">微信昵称</div>
+                <div class="p8-score">1200</div>
+                <div class="p8-rank">50%</div>
+                <div class="p8-help-him"></div>
+                <div class="p8-i-play"></div>
+            </div>
+        </div>-->
+		
+	<!--非会员游戏次数用光了的页面-->
+	<div class="page" id="p9">
+            <div class="content">
+                <div class="p9-close"></div>
+                <div class="p9-button2"></div>
+            </div>
+        </div>	
+		
+    </div>
+
+
+</body>
+</html>

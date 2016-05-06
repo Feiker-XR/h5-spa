@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link type="text/css" rel="stylesheet" href="style/index.css"/>
+		<script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="scripts/index.js" charset="gbk"></script>
+		<title>迎中秋 喝好酒</title>
+	</head>
+	
+	<body>
+		<div id="outer-container">
+
+		
+			<div class="page" id="loading"><div class="content"></div></div>			
+			
+			<div class="page" id="p1">															
+				<div class="content">
+                    <span class="p1-button-start"></span>
+                    <span class="p1-button-rule"></span>
+                    <span class="p1-button-showpic"></span>
+                </div>
+			</div>
+			
+			<div class="page" id="p2">															
+				<div class="content">
+                    <div class="p2-close">
+                    </div>
+                </div>
+			</div>
+			
+			<div class="page" id="p3">															
+				<div class="content">
+                    <div class="p3-close"></div>
+                    <div class="picbox"><img src="images/p3-pics.png" alt="图片集" /></div>
+                </div>
+			</div>
+			
+			<div class="page" id="p4">
+				<div class="content">
+                    <div class="p4-button-start"></div>
+                </div>
+			</div>
+<!--游戏界面-->		
+			<div class="page" id="p5">
+				<div class="content">
+                    <div class="p5-img">
+                        <div class="p5-pause"></div>
+                    </div>
+                    <div class="p5-time-box">
+                        <div class="p5-time-bar"></div>
+                    </div>
+                    <p class="p5-scores">0</p>
+                    <div class="p5-boy"></div>
+                </div>
+                <!--<div class="content" id="cbg" style="background:red;"></div>-->
+			</div>
+<!--抽奖按钮-->			
+			<div class="page" id="p6">
+				<div class="content">
+                    <div class="p6-button-draw"></div>
+                </div>
+			</div>
+<!--丰谷代金券一张，天猫店，微博分享-->			
+			<div class="page" id="p7">
+				<div class="content">
+                    <div class="p7-go-tmall"></div>
+                    <div class="p7-go-weibo"></div>
+                </div>
+			</div>
+<!--丰谷代金券一张，微店，微信分享-->		
+			<div class="page" id="p8">
+				<div class="content">
+                    <div class="p8-go-wxstore"></div>
+                    <div class="p8-go-weixin"></div>
+                </div>
+			</div>
+<!--旅行箱一个，填写基本信息-->			
+			<div class="page" id="p9">
+				<div class="content">
+					<div class="p9-prize">获得旅行箱一个</div>
+	
+                    <form method="get" action="" name="info">
+                        <input type="text" name="name" maxLength="10" class="p9-name"/>
+                        <input type="tel" name="phone" maxLength="11" class="p9-phone"/>
+                        <input type="text" name="address" maxLength="20" class="p9-address"/>
+                    </form>
+                    <div class="p9-submit"></div>
+                </div>
+			</div>
+<!--没有中奖，提示分享-->			
+			<div class="page" id="p10">
+				<div class="content">
+                    <div class="p10-flaunt"></div>
+                </div>
+			</div>
+<!--游戏时间结束，或者碰到了石头等的页面-->			
+			<div class="page" id="gameover">
+                <div class="content">
+                    <div class="again"></div>
+                </div>
+            </div>
+<!--弹出层-->
+			<div class="page curtion" id="curtion">
+			</div>
+		</div>
+	</body>
+</html>

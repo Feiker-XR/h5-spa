@@ -1,0 +1,404 @@
+/** ==>style for all **/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, dl {
+    list-style: none;
+}
+
+input, select, textarea {
+    border: none;
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    color: #fff;
+    font: 12px/20px "SimSun","ËÎÌו","Arial Narrow",HELVETICA;
+}
+
+a {
+    text-decoration: none;
+}
+
+/** ==>set page scale **/
+#outer-container {
+    overflow: hidden;
+    position: relative;
+    background: none;
+    background-size: cover;
+}
+
+    #outer-container .page { /*top:1008px;*/
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+    }
+
+    #outer-container .content {
+        width: 640px;
+        height: 1008px;
+        position: absolute;
+        overflow: visible;
+        transform-origin: 0px 0px 0px;
+        -ms-transform-origin: 0px 0px 0px;
+        -webkit-transform-origin: 0px 0px 0px;
+        -moz-transform-origin: 0px 0px 0px;
+        -o-transform-origin: 0px 0px 0px;
+    }
+
+/** ->>loading **/
+#loading .content {
+    text-align: center;
+    line-height: 1008px;
+    color: green;
+    font-size: 50px;
+}
+
+/** ->>page1 **/
+#p1 {
+    background: url(../images/p1-bg.jpg);
+}
+
+    #p1 .content {
+        background: url(../images/p1-bg.png);
+        overflow: visible;
+    }
+
+    #p1 span {
+        width: 235px;
+        height: 80px;
+        position: absolute;
+        left: 200px;
+        display: block;
+    }
+
+        #p1 span.p1-button-start {
+            bottom: 495px;
+        }
+
+        #p1 span.p1-button-rule {
+            bottom: 392px;
+        }
+
+        #p1 span.p1-button-showpic {
+            bottom: 287px;
+        }
+
+
+
+/** ->>page2 **/
+#p2 {
+    background: rgba(0,0,0,0.8);
+}
+
+    #p2 .content {
+        background: url(../images/p2-bg.png);
+    }
+
+    #p2 .p2-close {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 55px;
+        top: 63px;
+    }
+
+/** ->>page3 **/
+#p3 {
+    background: rgba(255,255,255,0.5);
+}
+
+    #p3 .content {
+        background: url(../images/p3-bg.png) no-repeat center center;
+        background-size: contain;
+    }
+
+    #p3 .picbox {
+        width: 449px;
+        height: 541px;
+        position: absolute;
+        left: 96px;
+        top: 360px;
+        overflow: auto;
+    }
+
+        #p3 .picbox img {
+            margin-left: 5px;
+        }
+
+    #p3 .p3-close {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        background: url(../images/close.png) no-repeat center center;
+    }
+
+
+
+/** ->>page4 **/
+#p4 {
+    background: rgba(0,0,0,0.8);
+}
+
+    #p4 .content {
+        background: url(../images/p4-bg.png);
+    }
+
+    #p4 .p4-button-start {
+        width: 240px;
+        height: 80px;
+        position: absolute;
+        left: 200px;
+        bottom: 103px;
+    }
+
+
+
+
+
+/** ->>page5 **/
+#p5 {
+    background: url(../images/p5-bg.jpg);
+}
+
+    #p5 .content {
+        /*background: url(../images/p5-bg.png) no-repeat;*/
+    }
+
+    #p5 .p5-img {
+        width: 640px;
+        height: 346px;
+        background: url(../images/p5-img.png) no-repeat center center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+    #p5 .p5-pause {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 73px;
+        right: 18px;
+    }
+
+    #p5 .p5-time-box {
+        width: 422px;
+        height: 40px;
+        background: url(../images/p5-timebox.png) no-repeat;
+        position: absolute;
+        left: 18px;
+        top: 102px;
+        background-size: 104% 100%;
+        z-index: 4;
+    }
+
+    #p5 .p5-time-bar {
+        width: 418px;
+        height: 25px;
+        background: url(../images/p5-timebar.png) repeat-x;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin: 6px;
+    }
+
+    #p5 .p5-scores {
+        width: 158px;
+        height: 60px;
+        position: absolute;
+        left: 28px;
+        top: 274px;
+        font-size: 45px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        line-height: 53px;
+        z-index: 3;
+    }
+
+    #p5 .p5-boy {
+        width: 166px;
+        height: 351px;
+        position: absolute;
+        left: 237px;
+        top: 646px;
+        background: url(../images/p5-boy.png) no-repeat center center;
+    }
+
+    #p5 .content img {
+        position: absolute;
+        top: 0px;
+    }
+
+
+/** ->>page6 **/
+#p6 {
+    background: rgba(0,0,0,0.8);
+	z-index:5;
+}
+
+    #p6 .content {
+        background: url(../images/p6-bg.png);
+    }
+
+    #p6 .p6-button-draw {
+        width: 245px;
+        height: 80px;
+        position: absolute;
+        left: 200px;
+        bottom: 271px;
+    }
+
+
+
+/** ->>page7 **/
+#p7 {
+    background: rgba(0,0,0,0.8);
+	z-index:5;
+}
+
+    #p7 .content {
+        background: url(../images/p7-bg.png);
+        s;
+    }
+
+    #p7 div {
+        width: 245px;
+        height: 80px;
+        position: absolute;
+        left: 200px;
+        bottom: 409px;
+    }
+
+        #p7 div.p7-go-weibo {
+            bottom: 314px;
+        }
+
+
+/** ->>page8 **/
+#p8 {
+    background: rgba(0,0,0,0.8);
+	z-index:5;
+}
+
+    #p8 .content {
+        background: url(../images/p8-bg.png);
+    }
+
+    #p8 div {
+        width: 245px;
+        height: 80px;
+        position: absolute;
+        left: 200px;
+        bottom: 409px;
+    }
+
+        #p8 div.p8-go-weixin {
+            bottom: 314px;
+        }
+
+
+
+/** ->>page9 **/
+#p9 {
+    background: rgba(0,0,0,0.8);
+	z-index:5;
+}
+
+    #p9 .content {
+        background: url(../images/p9-bg.png);
+    }
+
+    #p9 input {
+        width: 239px;
+        height: 37px;
+        position: absolute;
+        left: 239px;
+        top: 411px;
+        background: none;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        font-size: 28px;
+        line-height: 28px;
+        text-indent: 10px;
+        color: black;
+        font-weight: bold;
+    }
+
+        #p9 input.p9-phone {
+            top: 469px;
+        }
+
+        #p9 input.p9-address {
+            top: 530px;
+        }
+		#p9 .p9-prize{
+			width: 410px;
+			height: 60px;
+			position: absolute;
+			left: 116px;
+			top: 308px;
+			font-size: 30px;
+			text-align: center;
+			background-color: #fff8c8;
+			color: black;
+			line-height: 60px;
+			font-weight: bold;
+		}
+
+    #p9 .p9-submit {
+        width: 245px;
+        height: 80px;
+        position: absolute;
+        left: 200px;
+        bottom: 320px;
+    }
+
+/** ->>page10 **/
+#p10 {
+    background: rgba(0,0,0,0.8);
+	z-index:5;
+}
+
+    #p10 .content {
+        background: url(../images/p10-bg.png);
+    }
+
+    #p10 .p10-flaunt {
+        width: 245px;
+        height: 80px;
+        position: absolute;
+        left: 193px;
+        bottom: 370px;
+    }
+
+#gameover {
+    background: rgba(0,0,0,0.8);
+	z-index:5;
+}
+
+#gameover .content{
+    background:url(../images/gameover.png);
+}
+  
+.again {
+    width: 235px;
+    height: 78px;
+    position: absolute;
+    left: 209px;
+    top: 559px;
+}
+#curtion{
+	background:url(../images/h.png); background-size:contain;
+}
