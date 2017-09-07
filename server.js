@@ -8,7 +8,9 @@ http.createServer(function (req, res) {
             readFile('index.html',res);
         }else if(url === '/ford-tautus/index.html'){
             readFile('./ford-tautus/index.html',res);
-        }else{
+        }else if(url === '/test.html'){
+		readFile('./test.html',res);
+	}else{
             readFile('.'+url,res);
         }
     }
