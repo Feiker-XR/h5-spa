@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link type="text/css" rel="stylesheet" href="../public/styles/wl.css" />
+    <script type="text/javascript" src="../public/scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="../public/scripts/wl.js" charset="utf-8"></script>
+    <title>味蕾游戏</title>
+</head>
+<body>
+    <div class="logo"></div>
+    <div id="outer-container">
+
+        <div class="page" id="loading"><div class="content"></div></div>
+
+        <div class="page" id="p1">
+            <div class="content">
+                <div class="p1-btn" btn="p1-btn"></div>
+                <div class="theme theme1" btn="theme" style="left:50px;top:357px;"></div>
+                <div class="theme theme2" btn="theme" style="left:180px;top:510px;"></div>
+                <div class="theme theme3" btn="theme" style="left:296px;top:292px;"></div>
+                <div class="theme theme4" btn="theme" style="left:0px;top:20px;"></div>
+                <div class="theme theme5" btn="theme" style="left:437px;top:360px;"></div>
+                <div class="theme theme6" btn="theme" style="left:313px;top:90px;"></div>
+                <div class="theme theme7" btn="theme" style="left:482px;top:0px;"></div>
+                <div class="theme theme8" btn="theme" style="left:119px;top:222px;"></div>
+            </div>
+        </div>
+
+        <div class="page" id="p2" btn="p2">
+            <canvas id="cv" style="position:absolute; z-index:3;"></canvas>
+            <!--  <div class="content">
+
+                  <div style="width:179px;height:60px; position:absolute; left:121px; bottom:200px;" btn="p2-mine"></div>
+                  <div style="width:179px;height:60px; position:absolute; right:121px; bottom:200px;" btn="p2-ta"></div>
+                  <div style="width:344px;height:60px; position:absolute; left:147px; bottom:119px;" btn="p2-check-mine"></div>
+              </div>-->
+        </div>
+        <!--为自己还是为Ta设计形象-->
+        <div class="page" id="p3">
+            <div class="content">
+                <div btn="p3-mine"></div>
+                <div btn="p3-ta"></div>
+                <div btn="p3-check-mine"></div>
+            </div>
+        </div>
+        <!--我承诺弹层-->
+        <div class="page" id="p4">
+            <div class="content">
+                <div btn="p4-btn"></div>
+            </div>
+        </div>
+        <!--为Ta设计，输入Ta的名字或昵称-->
+        <div class="page" id="p5">
+            <div class="content">
+                <input type="text" maxlength="100" placeholder="昵称只能输入4个字哦" />
+                <div btn="p5-start"></div>
+            </div>
+        </div>
+        <!--选味道-->
+        <div class="page" id="p6">
+            <div class="content">
+                <div class="p6-title">你觉得自己是什么问道？</div>
+                <div class="p6-prev" btn="p6-prev"></div>
+                <div class="p6-next" btn="p6-next"></div>
+                <div class="choosebox">
+                    <ul>
+                        <li>
+                            <div class="first-line">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/1.png" alt="1" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/2.png" alt="2" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/3.png" alt="3" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/4.png" alt="4" /></li>
+                                </ol>
+                            </div>
+                            <div class="last-line">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/5.png" alt="5" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/6.png" alt="6" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/7.png" alt="7" /></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="first-line">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/8.png" alt="8" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/9.png" alt="9" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/10.png" alt="10" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/11.png" alt="11" /></li>
+                                </ol>
+                            </div>
+                            <div class="last-line">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/12.png" alt="12" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/13.png" alt="13" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/14.png" alt="14" /></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="first-line">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/15.png" alt="15" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/16.png" alt="16" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/17.png" alt="17" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/18.png" alt="18" /></li>
+                                </ol>
+                            </div>
+                            <div class="last-line">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/19.png" alt="19" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/20.png" alt="20" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/21.png" alt="21" /></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="first-line">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/22.png" alt="22" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/23.png" alt="23" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/24.png" alt="24" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/25.png" alt="25" /></li>
+                                </ol>
+                            </div>
+                            <div class="last-line">
+                                <ol>
+                                    <li style="margin-left:100px;"><img btn="img" src="./../public/images/wl/26.png" alt="26" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/27.png" alt="27" /></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="first-line" style="box-sizing:border-box; margin-top:90px; margin-left:90px;">
+                                <ol>
+                                    <li><img btn="img" src="./../public/images/wl/28.png" alt="28" /></li>
+                                    <li><img btn="img" src="./../public/images/wl/29.png" alt="29" /></li>
+                                    <!--<li><img btn="img" src="images/30.png" alt="30" /></li>-->
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <textarea placeholder="自己手动输入味道(最多填写三种哦，以顿号分隔)，点击选好啦！"></textarea>
+                <div class="p6-ready" btn="p6-ready"></div>
+                <div class="p6-askfor" btn="p6-askfor"></div>
+
+            </div>
+        </div>
+        <!--女孩儿形象选择-->
+        <div class="page" id="p7">
+            <div class="content">
+                <div id="p7-tip" style="width:219px;height:96px;position:absolute;left:50px;top:100px; z-index:2;background:url(./../public/images/wl/p7-tips.png) no-repeat;"></div>
+                <div class="p8-title">为自己挑个形象吧~</div>
+                <div class="p7-gender" btn="p7-gender"></div>
+                <div class="p7-lady lady">
+                    <!--<div class="p7-face">
+                        <div class="imgbox imgb"></div>
+                    </div>-->
+                    <canvas id="canvas7" width="537" height="495" style="width: 182px; height: 167px;"></canvas>
+                    <div class="p7-face-1" id="p7-face-1" btn="face" style="border-radius:0;"></div>
+                    <div class="p7-1 hideclothes"></div>
+                    <div class="p7-2 hideclothes"></div>
+                    <div class="p7-3 hideclothes"></div>
+                </div>
+                <div class="p7-lady-1 lady"></div>
+                <!--<div class="p7-lady-2 lady"></div>-->
+                <div class="p7-box p7-clothes">
+                    <ul>
+                        <li><img src="./../public/images/wl/201.png" alt="201" style="height:135%;" /></li>
+                        <li><img src="./../public/images/wl/202.png" alt="202" style="height:112%;" /></li>
+                        <li><img src="./../public/images/wl/203.png" alt="203" /></li>
+                        <li><img src="./../public/images/wl/204.png" alt="204" style="height:126%;" /></li>
+                        <li><img src="./../public/images/wl/205.png" alt="205" style="height:125%;" /></li>
+                        <li><img src="./../public/images/wl/206.png" alt="206" style="height:126%;" /></li>
+                        <li><img src="./../public/images/wl/207.png" alt="207" style="height:130%;" /></li>
+                        <li><img src="./../public/images/wl/208.png" alt="208" style="height:110%;" /></li>
+                        <li><img src="./../public/images/wl/209.png" alt="209" style="height:120%;" /></li>
+                        <li><img src="./../public/images/wl/210.png" alt="210" style="height:110%;" /></li>
+                    </ul>
+                </div>
+                <div class="p7-box p7-trous" style="top:411px;">
+                    <ul>
+                        <li><img src="./../public/images/wl/301.png" alt="301" /></li>
+                        <li><img src="./../public/images/wl/302.png" alt="302" style="height:200%;padding-top:10%;" /></li>
+                        <li><img src="./../public/images/wl/303.png" alt="303" /></li>
+                        <li><img src="./../public/images/wl/304.png" alt="304" style="height:200%; padding-top:20%;" /></li>
+                        <li><img src="./../public/images/wl/305.png" alt="305" style="height:150%; padding-top:15%;" /></li>
+                        <li><img src="./../public/images/wl/306.png" alt="306" style="height:200%; padding-top:12%;" /></li>
+                        <li><img src="./../public/images/wl/307.png" alt="307" style="height:200%; padding-top:20%;" /></li>
+                        <li><img src="./../public/images/wl/308.png" alt="308" style="height:200%; padding-top:13%;" /></li>
+                        <li><img src="./../public/images/wl/309.png" alt="309" /></li>
+                        <li><img src="./../public/images/wl/310.png" alt="310" /></li>
+                    </ul>
+                </div>
+                <div class="p7-box p7-shoes" style="top:588px;">
+                    <ul>
+                        <li><img src="./../public/images/wl/401.png" alt="401" style="margin-top:-45px;" /></li>
+                        <li><img src="./../public/images/wl/402.png" alt="402" style="margin-top:-45px;" /></li>
+                        <li><img src="./../public/images/wl/403.png" alt="403" style="margin-top:-45px;" /></li>
+                        <li><img src="./../public/images/wl/404.png" alt="404" style="margin-top:-45px;" /></li>
+                        <li><img src="./../public/images/wl/405.png" alt="405" style="margin-top:-23px;" /></li>
+                        <li><img src="./../public/images/wl/406.png" alt="406" style="margin-top:-45px;" /></li>
+                        <li><img src="./../public/images/wl/407.png" alt="407" style="margin-top:-45px;" /></li>
+                        <li><img src="./../public/images/wl/408.png" alt="408" style="margin-top:-45px;" /></li>
+                        <li><img src="./../public/images/wl/409.png" alt="409" /></li>
+                        <li><img src="./../public/images/wl/410.png" alt="410" style="margin-top:-45px;" /></li>
+                    </ul>
+                </div>
+                <div class="p7-btn p7-btn1" btn="p7-btn1"></div>
+                <div class="p7-btn p7-btn2" btn="p7-btn2"></div>
+                <div class="p7-btn p7-btn3" btn="p7-btn3" style="top:450px;"></div>
+                <div class="p7-btn p7-btn4" btn="p7-btn4" style="top:450px;"></div>
+                <div class="p7-btn p7-btn5" btn="p7-btn5" style="top:627px;"></div>
+                <div class="p7-btn p7-btn6" btn="p7-btn6" style="top:627px;"></div>
+                <div class="p7-change" btn="p7-change"></div>
+                <div class="p7-ready" btn="p7-ready"></div>
+                <div class="p7-askfor" btn="p7-askfor"></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="page" id="p7-cover">
+            <div class="content">
+                <div class="imgbox imgb">
+
+                </div>
+                <div class="p7-cover2">
+                    <div class="imgbox" id="moveobj"></div>
+                </div>
+
+                <div class="p7-cover-btn" btn="p7-cover-btn">确定</div>
+            </div>
+
+        </div>
+
+
+        <!--男孩儿形象选择-->
+        <div class="page" id="p8">
+            <div class="content">
+                <div class="p8-prev" btn="p8-prev"></div>
+                <div class="p8-next" btn="p8-next"></div>
+                <div class="p8-title">为自己挑个形象吧~</div>
+                <div class="p8-gender" btn="p8-gender"></div>
+                <div class="p8-box">
+                    <ul>
+                        <li><img src="./../public/images/wl/501.png" alt="501" /></li>
+                        <li><img src="./../public/images/wl/502.png" alt="502" /></li>
+                        <li><img src="./../public/images/wl/503.png" alt="503" /></li>
+                        <li><img src="./../public/images/wl/504.png" alt="504" /></li>
+                    </ul>
+                </div>
+                <div class="p8-ready" btn="p8-ready"></div>
+                <div class="p8-askfor" btn="p8-askfor"></div>
+            </div>
+        </div>
+        <!--只为女士设计-->
+        <div class="page" id="p9">
+            <div class="content">
+                <div class="p9-btn" btn="p9-btn"></div>
+            </div>
+        </div>
+        <!--摇一摇-->
+        <div class="page" id="p10">
+            <div class="content">
+                <div class="p10-img"></div>
+                <div class="p10-shake" btn="p10-shake"></div>
+            </div>
+        </div>
+        <!--为自己设计结果页面-->
+        <div class="page" id="p11">
+            <div class="content">
+                <div class="p11-taste p11-taste1"></div>
+                <div class="p11-taste p11-taste2" style="top:545px;"></div>
+                <div class="p11-taste p11-taste3" style="left:240px;top:465px;"></div>
+                <div class="p11-people">
+                    <div class="p7-lady zoomgirl">
+                        <!--<div class="p7-face">
+                            <div class="imgbox imgb"></div>
+                        </div>-->
+                        <canvas id="canvas11" width="537" height="495" style="width: 182px; height: 167px;"></canvas>
+                        <div class="p7-face-1"></div>
+                        <div class="p7-1 hideclothes"></div>
+                        <div class="p7-2 hideclothes"></div>
+                        <div class="p7-3 hideclothes"></div>
+                    </div>
+                    <div class="p7-lady-1 lady zoomlady"></div>
+                </div>
+                <div class="p11-confirm" btn="p11-confirm"></div>
+                <div class="p11-backchoose" btn="p11-backchoose"></div>
+            </div>
+        </div>
+        <!--为Ta设计结果页面-->
+        <div class="page" id="p12">
+            <div class="content">
+                <div class="p12-title">你心目中的Ta</div>
+                <div class="p12-taste p12-taste1"></div>
+                <div class="p12-taste p12-taste2" style="top:545px;"></div>
+                <div class="p12-taste p12-taste3" style="left:240px;top:465px;"></div>
+                <div class="p12-people">
+                    <div class="p7-lady zoomgirl">
+                        <div class="p7-face-1"></div>
+                        <!--<div class="p7-face">
+                            <div class="imgbox imgb"></div>
+                        </div>-->
+                        <canvas id="canvas12" width="537" height="495" style="width: 182px; height: 167px;"></canvas>
+                        <div class="p7-1 hideclothes"></div>
+                        <div class="p7-2 hideclothes"></div>
+                        <div class="p7-3 hideclothes"></div>
+                    </div>
+                    <div class="p7-lady-1 lady zoomlady"></div>
+                </div>
+                <div class="p12-tell-ta" btn="p12-tell-ta"></div>
+                <div class="p12-play-again" btn="p12-play-again"></div>
+                <div class="p12-suprise" btn="p12-suprise"></div>
+            </div>
+        </div>
+        <!--为自己设计再确认页面-->
+        <div class="page" id="p13">
+            <div class="content">
+                <div class="p13-taste p13-taste1" style="top:325px;"></div>
+                <div class="p13-taste p13-taste2" style="top:480px;"></div>
+                <div class="p13-taste p13-taste3" style="left:240px;top:402px;"></div>
+                <div class="p13-people" style="top:229px;">
+                    <div class="p7-lady zoomgirl">
+                        <div class="p7-face-1"></div>
+                        <!--<div class="p7-face">
+                            <div class="imgbox imgb"></div>
+                        </div>-->
+                        <canvas id="canvas13" width="537" height="495" style="width: 182px; height: 167px;"></canvas>
+                        <div class="p7-1 hideclothes"></div>
+                        <div class="p7-2 hideclothes"></div>
+                        <div class="p7-3 hideclothes"></div>
+                    </div>
+                    <div class="p7-lady-1 lady zoomlady"></div>
+                </div>
+                <div class="p13-reset" btn="p13-reset"></div>
+                <div class="p13-suprise" btn="p13-suprise"></div>
+                <div class="p13-know" btn="p13-know"></div>
+                <div class="p13-msgbox">
+                    <ul>
+                        <li><div class="p13-img">微信头像</div> <div class="p13-name">微信昵称</div><div class="p13-msg">留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容</div></li>
+                        <li><div class="p13-img">微信头像</div> <div class="p13-name">微信昵称</div><div class="p13-msg">留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容</div></li>
+                        <li><div class="p13-img">微信头像</div> <div class="p13-name">微信昵称</div><div class="p13-msg">留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--为Ta设计分享弹出层-->
+        <div class="page" id="p14">
+            <div class="content" btn="p14content">
+
+            </div>
+        </div>
+        <!--为自己设计分享弹出层-->
+        <div class="page" id="p15">
+            <div class="content" btn="p15content">
+
+            </div>
+        </div>
+        <!--自己的形象分享后的页面-->
+        <div class="page" id="p16">
+            <div class="content">
+                <div class="p16-title">TA心目中的自己</div>
+				<div style="width:640px; height:680px; background:red;">
+					<div class="p16-taste p16-taste1" style="top:325px;"></div>
+					<div class="p16-taste p16-taste2" style="top:480px;"></div>
+					<div class="p16-taste p16-taste3" style="left:240px;top:402px;"></div>
+					<div class="p13-people" style="top:229px;">
+						<div class="p7-lady zoomgirl">
+							<div class="p7-face-1"></div>
+							<canvas id="canvas16" width="537" height="495" style="width: 182px; height: 167px;"></canvas>
+							<div class="p7-1 hideclothes"></div>
+							<div class="p7-2 hideclothes"></div>
+							<div class="p7-3 hideclothes"></div>
+						</div>
+						<div class="p7-lady-1 lady zoomlady"></div>
+					</div>
+				</div>
+				<div id="bottoms" style="width:640px; height:328px; background:url(./../public/images/wl/b1.png) no-repeat; position:relative; bottom:0;">
+					<div id="p16-btn" style="display:none;">
+						<div class="p16-agree" btn="p16-agree" style="width:290px;left:170px; bottom:207px;">让大家知道真实的我</div>
+						<div class="p16-reset" btn="p16-reset" style="width:159px;left:148px;bottom:269px;">重新设计</div>
+						<div class="p16-check" btn="p16-check" style="width:166px; left:322px; bottom:269px;">点我有惊喜</div>
+					</div>
+					<!--该按钮组显示时id="bottoms"背景为a1.png-->
+					<div id="p17-btn">
+						<div class="p16-agree" btn="p16-agree" style="width:160px;left:340px; bottom:269px;">让大家知道真实的我</div>
+						<div class="p16-reset" btn="p16-reset" style="width:185px;left:138px;bottom:269px;">重新设计</div>
+						<div class="p16-check" btn="p16-check" style="width:189px; left:216px; bottom:206px;">点我有惊喜</div>
+					</div>
+					
+					
+					<input type="text" placeholder="不忍直视，我要吐槽" style="position: absolute;left: 100px;top: 138px;height: 26px;width: 358px;font-size: 20px; border: none; background: none;color: white;"/>
+					<div style="width:60px; height:40px;position:absolute; background:blue;top:128px; right:88px;"></div>
+					<div class="p13-msgbox" id="msgbox" style="height:135px;">
+						<ul style="position:absolute; top:0px;">
+							<li><div class="p13-img">微信头像</div> <div class="p13-name">微信昵称</div><div class="p13-msg">留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容</div></li>
+							<li><div class="p13-img">微信头像</div> <div class="p13-name">微信昵称</div><div class="p13-msg">留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容</div></li>
+							<li><div class="p13-img">微信头像</div> <div class="p13-name">微信昵称</div><div class="p13-msg">留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容留言内容</div></li>
+						</ul>
+					</div>
+				</div>
+
+            </div>
+			<script>
+				var ostart;
+				var oend;
+				var posy;
+				$("#msgbox ul").bind("touchstart",function(e){
+					ostart = e.originalEvent.touches[0].pageY*1/scale;
+					posy = parseFloat($("#msgbox ul").css("top"));
+					console.log(ostart+","+posy);
+				});
+				$("#msgbox ul").bind("touchmove",function(e){
+					oend = e.originalEvent.touches[0].pageY*1/scale;
+					$("#msgbox ul").css("top",posy + oend - ostart+"px");
+					console.log(oend);
+				});
+				$("#msgbox ul").bind("touchend",function(e){
+				
+				});
+			</script>
+        </div>
+        <!--吐槽-->
+        <div class="page" id="p16-1">
+            <div class="content">
+                <div class="p16-cover">
+                    <textarea placeholder="请输入留言文字"></textarea>
+                    <div class="p16-over" btn="16-over"></div>
+                </div>
+            </div>
+        </div>
+        <!--为别人设计后分享的页面-->
+        <div class="page" id="p17">
+            <div class="content">
+                <div class="p17-title">TA心目中的XXX,你认同吗?</div>
+                <div class="p17-taste p17-taste1" style="top:325px;"></div>
+                <div class="p17-taste p17-taste2" style="top:485px;"></div>
+                <div class="p17-taste p17-taste3" style="left:240px;top:405px;"></div>
+                <div class="p17-people" style="top:224px;">
+                    <div class="p7-lady zoomgirl" style="top:-139px;">
+                        <div class="p7-face-1"></div>
+                        <!--<div class="p7-face">
+                            <div class="imgbox imgb"></div>
+                        </div>-->
+                        <canvas id="canvas17" width="537" height="495" style="width: 182px; height: 167px;"></canvas>
+                        <div class="p7-1 hideclothes"></div>
+                        <div class="p7-2 hideclothes"></div>
+                        <div class="p7-3 hideclothes"></div>
+                    </div>
+                    <div class="p7-lady-1 lady zoomlady"></div>
+                </div>
+                <div class="p17-agree" btn="p17-agree"></div>
+                <div class="p17-disagree" btn="p17-disagree"></div>
+                <div class="p17-reset" btn="p17-reset"></div>
+                <div class="p17-play" btn="p17-play"></div>
+                <div class="p17-suprise" btn="p17-suprise"></div>
+            </div>
+        </div>
+        <!--我来设计-->
+        <div class="page" id="p18">
+            <div class="content" btn="p18content">
+                <div class="p18-btn" btn="p18-btn"></div>
+            </div>
+        </div>
+        <!--弹层-->
+        <div class="page" id="curtion" style="z-index:10; background:rgba(0,0,0,0.8)" onclick="this.style.display ='none'">
+            <div class="content" style="background:url(./../public/images/wl/curtion.png) no-repeat center center">
+                <div class="curtiontext" style="width: 640px;height: 80px;text-align: center;position: absolute;bottom: 200px;font-size: 30px;line-height: 80px; overflow: hidden;">这里是提示语言</div>
+			</div>
+        </div>
+        <script>
+            var showtips = function (text) {
+                $("#curtion").show();
+                $(".curtiontext").text(text);
+            }
+			
+	var ostart1;
+    var oend1;
+    var posy1;
+    $("#msgbox1 ul").bind("touchstart", function (e) {
+        ostart1 = e.originalEvent.touches[0].pageY * 1 / scale;
+        posy1 = parseFloat($("#msgbox1 ul").css("top"));
+        //console.log(ostart + "," + posy);
+    });
+    $(document).bind("touchmove", function (e) {
+		if(ostart1!=null && posy1 !=null){
+			 oend1 = e.originalEvent.touches[0].pageY * 1 / scale;
+			$("#msgbox1 ul").css("top", posy1 + oend1 - ostart1 + "px");
+		}
+       
+        //console.log(oend);
+    });
+    $(document).bind("touchend", function (e) {
+		if(oend1!=null){
+			if (parseFloat($("#msgbox1 ul").css("top")) >= 0) {
+				$("#msgbox1 ul").css("top", "0px");
+			}
+			if (parseFloat($("#msgbox1 ul").css("top")) <= -(parseFloat($("#msgbox1 ul").css("height")) - 135)) {
+				$("#msgbox1 ul").css("top", -(parseFloat($("#msgbox1 ul").css("height")) - 135) + "px");
+			}
+		}
+		ostart1 = null;
+		oend1 = null;
+		posy1 = null;
+    });
+			
+        </script>
+    </div>
+</body>
+</html>

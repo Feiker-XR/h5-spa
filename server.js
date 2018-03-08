@@ -13,9 +13,7 @@ http.createServer(function (req, res) {
         }
     }
 
-}).listen(18080)
-
-
+}).listen(3000)
 function readFile(filename,res) {
     fs.readFile(filename, function (err, data) {
         if(err){
@@ -31,17 +29,17 @@ function readFile(filename,res) {
                 case 'css':
                     res.setHeader('Content-Type','text/css');
                     break;
-				case 'jpg':
-					res.setHeader('Content-Type','images/jpg');
-					break;
-				case 'png':
-					res.setHeader('Content-Type','images/png');
-					break;
-				case 'mp3':
-					res.setHeader('Content-Type','audio/mp3');
-					break;
+	case 'jpg':
+		res.setHeader('Content-Type','images/jpg');
+		break;
+	case 'png':
+		res.setHeader('Content-Type','images/png');
+		break;
+	case 'mp3':
+		res.setHeader('Content-Type','audio/mp3');
+		break;
             }
-			res.setHeader('Content-Length',data.length);
+            res.setHeader('Content-Length',data.length);
             res.end(data);
         }
     })

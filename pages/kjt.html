@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>抽奖程序</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #box {
+            background: url("./../public/images/kjt/bg.jpg") no-repeat center center;
+            background-size: 100% 100%;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+        #wrap {
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            text-align: center;
+        }
+        #name {
+            width: 100%;
+            height: 150px;
+            color: fuchsia;
+            text-align: center;
+            line-height: 200px;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: "楷体";
+        }
+        #btn {
+            width: 200px;
+            height: 50px;
+            border: 2px solid crimson;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: "楷体";
+            font-weight: bold;
+            font-size: 42px;
+            letter-spacing: 12px;
+            background: crimson;
+            box-shadow: 2px 2px 2px 2px crimson;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="wrap">
+            <div id="name">who?</div>
+            <div id="btn">开始</div>
+        </div>
+        <div>
+</body>
+
+<script type="text/javascript">
+    var img = new Image();
+    img.src = "./../public/images/kjt/bg.jpg";
+    img.onload = function () {
+        document.getElementById("box").style.display = "block";
+    }
+    var random, interval, pos, temp, str, arr, flag;
+	
+	var list = new Array();
+	for(var i = 0; i<300;i++){
+		var str = "test"+i;
+		list.push(str);
+	}	
+		console.log(list);
+                  
+    //本地名單庫，若沒有則用定義的list，若有，則從本地存儲中取
+    if (typeof (localStorage.obj) === "undefined") {
+        arr = list;
+        setLocalStorage();
+    } else {
+        getLocalStorage();
+    }
+     
+    //外层容器大小设置
+    var box = document.getElementById('box');
+    box.style.width = window.innerWidth + 'px';
+    box.style.height = window.innerHeight + 'px';
+    //内层容器位置设置
+    var wrap = document.getElementById("wrap");
+    //wrap.style.left = (window.innerWidth - 300) / 2 + 'px';
+    wrap.style.bottom = (window.innerHeight - 300) / 2 + 'px';
+    //删除数组元素
+    Array.prototype.remove = function (dx) {
+        if (isNaN(dx) || dx > this.length) {
+            return false;
+        }
+        for (var i = 0, n = 0; i < this.length; i++) {
+            if (this[i] != this[dx]) {
+                this[n++] = this[i]
+            }
+        }
+        this.length -= 1
+    }
+    //获取随机数
+    function getRandom() {
+        getLocalStorage();
+        random = Math.floor(Math.random() * 100000 % arr.length);
+        return random;
+    }
+    //数组随机排序规则
+    function randomSort(a, b) {
+        return Math.random() > 0.5 ? -1 : 1;
+    }
+    //封装本地数组为json串；
+    function setLocalStorage() {
+        localStorage.obj = null;
+        str = JSON.stringify(arr);
+        localStorage.obj = str;
+    }
+    //获取本地存储的数组
+    function getLocalStorage() {
+        str = localStorage.obj;
+        arr = JSON.parse(str);
+        arr.sort(randomSort);
+    }
+    
+    //开始滚动名字
+    function startScrollNames(name){
+        /* @第二种方法： 二次随机
+        interval = setInterval(function(){
+            pos = getRandom();
+            //name.innerHTML=arr[pos];
+        },10);
+        */
+        name.style.lineHeight = "200px";
+        temp = 0;
+        interval = setInterval(function () {
+            if (temp < arr.length && temp >= 0) {
+                name.innerHTML = arr[temp++];
+                name.setAttribute("index", temp - 1);		//设置标记
+            } else {
+                temp = 0;
+            }
+        }, 10);
+    }
+    
+    //停止滾動名字
+    function stopScrollNames(name,num){
+        clearInterval(interval);
+        pos = parseInt(name.getAttribute("index"));		//获取标记刪除
+        name.innerHTML = "";
+        console.log("停止滾動時的pos:"+pos);
+        if(num>arr.length){
+            name.innerHTML="who?";
+            alert("現在只有"+arr.length+"人了，不能抽取"+num+"人!");
+        }else{
+            if(pos+num<=arr.length){        //要刪除的元素下標加數量小於數組的長度
+                for(var i = pos; i<pos+num; i++){
+                    name.innerHTML += (arr[i]+" ");
+                }
+                //console.log("要刪除的元素：-->"+name.innerHTML);
+                arr.splice(pos,num);    //从数据模型中删除
+            }else{
+                var tp = arr.length-pos;
+                for(var j = pos; j<arr.length; j++){
+                    name.innerHTML += (arr[j]+" ");
+                }
+                for(var t=0; t<num-tp;t++){
+                    name.innerHTML += (arr[t]+" ");
+                }
+                arr.splice(pos,tp);
+                arr.splice(0,num-tp);
+            }
+            formatDisplayName(name);
+            //console.log("刪除后的數組：");
+            console.log("删除后数组的长度："+arr.length);
+            setLocalStorage();      //存入本地
+        }
+    }
+    
+    //格式化顯示名字
+    function formatDisplayName(node){
+        var formatName = node.innerHTML.split(" ");
+        formatName.splice(formatName.length-1,1);
+        node.innerHTML = "";
+        for(var s = 0; s<formatName.length;s++){
+            node.innerHTML += formatName[s] +" ";
+            if(s==4){
+                node.innerHTML+="<br/>";
+            }
+            if(s == 5){
+                 node.style.lineHeight = "80px";
+            }
+        }
+    }
+    //事件程序
+    function beginOrEnd(node,num) {
+        var name = document.getElementById("name");
+        if (arr.length == 0) {
+            flag = true;
+        }
+        if (!flag) {
+            if (node.innerHTML == "开始") {
+                  getLocalStorage();              //从本地获取arr的值
+                  //console.log("本地取出的數組原樣：");
+                  console.log("取出数组的长度："+arr.length);
+                startScrollNames(name);
+                node.innerHTML = "停止";
+            } else {
+                stopScrollNames(name,num);
+                node.innerHTML = "开始";
+            }
+        } else {
+            name.innerHTML = "已抽完";
+            alert("每个人都已经抽取过了！");
+        }
+    }
+    //窗口大小改变事件
+    window.onresize = function () {
+        history.go(0);
+    }
+    //回车事件
+    document.onkeyup = function (event) {
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        switch (e && e.keyCode) {
+            case 49 || 97:
+                beginOrEnd(document.getElementById("btn"),1);
+                break;
+            case 50 || 98:
+                beginOrEnd(document.getElementById("btn"),2);
+                break;
+            case 51 || 99:
+                beginOrEnd(document.getElementById("btn"),3);
+                break;
+            case 52 || 100:
+                beginOrEnd(document.getElementById("btn"),4);
+                break;
+            case 53 || 101:
+                beginOrEnd(document.getElementById("btn"),5);
+                break;
+            case 54 || 102:
+                beginOrEnd(document.getElementById("btn"),6);
+                break;
+            case 55 || 103:
+                beginOrEnd(document.getElementById("btn"),7);
+                break;
+            case 56 || 104:
+                beginOrEnd(document.getElementById("btn"),8);
+                break;
+            case 57 || 105:
+                beginOrEnd(document.getElementById("btn"),9);
+                break;
+         
+            case 13:
+                beginOrEnd(document.getElementById("btn"),1);
+                break;
+			//F9键重置所有	
+			case 120:
+				var istrue = confirm('确实要重置所有设置?');
+				if(istrue){
+					localStorage.clear();
+					history.go(0);
+				}
+				break;
+        }
+    }
+    //点击事件
+    document.getElementById("btn").onclick = function () {
+        beginOrEnd(this,1);
+    }
+</script>
+</html>
