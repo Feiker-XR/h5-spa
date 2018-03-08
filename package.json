@@ -1,8 +1,8 @@
 {
-    "name": "bae-nodejs",
+    "name": "h5spa",
     "version": "1.0.0",
-    "author": "bae",
-    "description": "The first bae nodejs app!",
+    "author": "feiker",
+    "description": "html5-spa",
     "scripts": {
         "start": "node server.js"
     },

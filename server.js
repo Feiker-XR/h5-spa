@@ -6,8 +6,6 @@ http.createServer(function (req, res) {
     if(url !== 'favicon.ico'){
         if (url === '/') {
             readFile('index.html',res);
-        }else if(url === '/ford-tautus/index.html'){
-            readFile('./ford-tautus/index.html',res);
         }else{
             readFile('.'+url,res);
         }
